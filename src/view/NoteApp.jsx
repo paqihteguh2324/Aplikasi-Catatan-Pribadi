@@ -25,7 +25,6 @@ class NoteApp extends React.Component {
 
   onSearchChangeHandler = (searchKeyword) => {
     this.setState((prevState) => {
-      console.log(searchKeyword.trim());
       if (searchKeyword.trim().length <= 1) {
         this.setState({ notes: this.state.realNote });
       }
