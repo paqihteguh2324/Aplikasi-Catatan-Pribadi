@@ -1,5 +1,6 @@
 import React from "react";
 import {FaRegCalendarCheck} from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 class AddNewNote extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class AddNewNote extends React.Component {
         }
         this.props.onAddNote({
            title: title.trim(),
-              body: body.trim(),
+           body: body.trim(),
         }
         );
         this.setState({
@@ -56,5 +57,9 @@ class AddNewNote extends React.Component {
   );
     }
 }
+
+AddNewNote.propTypes = {
+    onAddNote: PropTypes.func,
+};
 
 export default AddNewNote;
